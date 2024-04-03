@@ -10,7 +10,14 @@
         }
       ],
       "UpstreamPathTemplate": "/api/Users",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "Period": "10s",
+        "EnableRateLimiting": true,
+        "PeriodTimespan": 10,
+        "Limit": 1
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Products",
@@ -26,6 +33,12 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7071"
+    "BaseUrl": "https://localhost:7071",
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false,
+      "QuotaExceededMessage": "Customize Tips!",
+      "HttpStatusCode": 123,
+      "ClientIdHeader": "Test"
+    }
   }
 }
