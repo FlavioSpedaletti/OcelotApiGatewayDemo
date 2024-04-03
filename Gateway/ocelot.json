@@ -2,11 +2,11 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/Users",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5233
+          "Port": 7093
         }
       ],
       "UpstreamPathTemplate": "/api/Users",
@@ -14,11 +14,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/Products",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5123
+          "Port": 7149
         }
       ],
       "UpstreamPathTemplate": "/api/Products",
@@ -26,6 +26,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5165"
+    "BaseUrl": "https://localhost:7071"
   }
 }
